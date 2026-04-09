@@ -1,15 +1,20 @@
-self.addEventListener('install', (e) => {
-  e.waitUntil(
-    caches.open('system-hunter-v1').then((cache) => {
-      return cache.addAll(['/', '/manifest.json']);
-    })
+const CACHE_NAME = 'system-hunter-v1';
+const ASSETS = [
+  '/',
+  '/manifest.json',
+  'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
   );
 });
 
-self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    caches.match(e.request).then((response) => {
-      return response || fetch(e.request);
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
     })
   );
 });
