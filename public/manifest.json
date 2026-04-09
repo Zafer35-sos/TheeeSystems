@@ -1,0 +1,47 @@
+{
+  "name": "System Hunter",
+  "short_name": "Hunter",
+  "description": "The absolute administrator of the Hunter System.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#18151f",
+  "theme_color": "#732aff",
+  "orientation": "portrait",
+  "id": "com.systemhunter.app",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/hunter-icon/192/192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://picsum.photos/seed/hunter-icon-mask/192/192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://picsum.photos/seed/hunter-512/512/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://picsum.photos/seed/hunter-ss1/640/1280.png",
+      "sizes": "640x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Hunter Dashboard"
+    },
+    {
+      "src": "https://picsum.photos/seed/hunter-ss2/1280/720.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "System Terminal"
+    }
+  ]
+}
