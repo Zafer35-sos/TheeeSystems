@@ -1,6 +1,6 @@
 'use server';
 /**
- * @fileOverview A Genkit flow for calculating task XP rewards with high-volume recognition.
+ * @fileOverview A Genkit flow for calculating task XP rewards with elite scaling for high-volume tasks.
  */
 
 import { ai } from '@/ai/genkit';
@@ -33,14 +33,14 @@ const calculateTaskXPPrompt = ai.definePrompt({
   name: 'calculateTaskXPPrompt',
   input: { schema: CalculateTaskXPInputSchema },
   output: { schema: CalculateTaskXPOutputSchema },
-  system: 'You are the absolute administrator of the Hunter System. You reward effort based on intensity and volume.',
+  system: 'You are the absolute administrator of the Hunter System. You reward intensity, volume, and effort.',
   prompt: `You are the System from Solo Leveling. Assign XP rewards (100 XP = 1 Level).
 
-CRITICAL SCALE INSTRUCTIONS:
-- Analyze descriptions for REPETITIONS and SETS. 
-- 100 Pushups / 100 Situps / 10km Run are ELITE FEATS. Award 90-150 XP for such tasks.
-- Do NOT give 10 XP for tasks that take more than 15 minutes of physical or mental labor.
-- Volume = Power. 50+ reps of anything is at least 60 XP.
+CRITICAL ELITE SCALING:
+- If a task description mentions 100 reps (e.g., 100 Pushups, 100 Situps) or 10km run, it is an ELITE FEAT. Award 90-140 XP.
+- Volume = Power. 50+ reps of any exercise is at least 60 XP.
+- Reading 50+ pages is at least 50 XP.
+- NEVER award less than 30 XP for tasks containing the word 'workout' or 'study' with specific numbers.
 
 Task: {{{title}}}
 Details: {{{description}}}

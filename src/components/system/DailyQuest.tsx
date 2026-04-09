@@ -15,6 +15,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
 
@@ -40,7 +41,6 @@ export function DailyQuest({
   const [description, setDescription] = useState("");
   const [taskType, setTaskType] = useState<TaskType>("daily");
 
-  // PIN WEEKLY CHALLENGES AT TOP
   const sortedTasks = useMemo(() => {
     return [...tasks].sort((a, b) => {
       if (a.isWeekly && !b.isWeekly) return -1;
@@ -104,6 +104,9 @@ export function DailyQuest({
               <DialogTitle className="text-xl font-bold text-white tracking-tight">
                 New Task
               </DialogTitle>
+              <DialogDescription className="text-xs text-muted-foreground">
+                Add a new objective to your daily quest log. The system will evaluate the challenge level.
+              </DialogDescription>
             </DialogHeader>
 
             <div className="space-y-6">
@@ -144,7 +147,7 @@ export function DailyQuest({
               <div className="space-y-2">
                 <label className="text-xs font-semibold text-muted-foreground">Description (optional)</label>
                 <Textarea 
-                  placeholder="Details..." 
+                  placeholder="Include details like repetitions and duration for better XP assessment." 
                   className="bg-[#241d33] border-none min-h-[100px] text-sm text-white placeholder:text-muted-foreground/50 focus-visible:ring-primary resize-none"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
