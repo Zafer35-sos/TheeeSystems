@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
@@ -5,7 +6,7 @@ import { Task, UserProfile, XP_PER_LEVEL, UserStats, Message, TaskType, StatusEf
 import { calculateTaskXP } from "@/ai/flows/calculate-task-xp";
 import { useToast } from "@/hooks/use-toast";
 
-const STORAGE_KEY = "system_hunter_data_v1";
+const STORAGE_KEY = "system_hunter_data_v2";
 
 const INITIAL_PROFILE: UserProfile = {
   firstName: "",
@@ -160,10 +161,10 @@ export function useProgression() {
     } catch (error) {
       setTasks(prev => prev.map(t => 
         t.id === id 
-          ? { ...t, xpReward: 10, isCalculating: false } 
+          ? { ...t, xpReward: 15, isCalculating: false } 
           : t
       ));
-      showSystemNotification("[The Architect is busy. Standard reward assigned.]");
+      showSystemNotification("[The Architect is synchronizing. Standard reward assigned.]");
     }
   };
 

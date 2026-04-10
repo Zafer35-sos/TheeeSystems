@@ -3,12 +3,12 @@
   "name": "System Hunter",
   "short_name": "Hunter",
   "description": "The absolute administrator of the Hunter System. Level up your life.",
-  "id": "com.systemhunter.app.v1",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1a1625",
+  "background_color": "#000000",
   "theme_color": "#732aff",
   "orientation": "portrait",
+  "id": "com.systemhunter.app",
   "icons": [
     {
       "src": "https://placehold.co/192x192/732aff/ffffff.png?text=H",
@@ -23,32 +23,26 @@
       "purpose": "maskable"
     },
     {
-      "src": "https://placehold.co/512x512/732aff/ffffff.png?text=System",
+      "src": "https://placehold.co/512x512/732aff/ffffff.png?text=System+Hunter",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
-    },
-    {
-      "src": "https://placehold.co/512x512/732aff/ffffff.png?text=System",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "https://placehold.co/1080x1920/1a1625/732aff.png?text=Daily+Quests",
+      "src": "https://picsum.photos/seed/hunter-ss1/1080/1920",
       "sizes": "1080x1920",
-      "type": "image/png",
+      "type": "image/jpeg",
       "form_factor": "narrow",
-      "label": "Daily Quest Log"
+      "label": "Hunter Terminal Interface"
     },
     {
-      "src": "https://placehold.co/1080x1920/1a1625/732aff.png?text=Character+Stats",
-      "sizes": "1080x1920",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Hunter Attributes"
+      "src": "https://picsum.photos/seed/hunter-ss2/1920/1080",
+      "sizes": "1920x1080",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "System Dashboard"
     }
   ]
 }

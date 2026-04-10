@@ -79,7 +79,7 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
                       <Trophy className="h-5 w-5 text-yellow-500" /> TITLE COLLECTION
                     </DialogTitle>
                     <DialogDescription className="text-xs text-muted-foreground">
-                      Equip a title earned through your achievements in the System.
+                      Equip a title earned through your achievements in the System. Titles may grant unique prestige.
                     </DialogDescription>
                   </DialogHeader>
                   <div className="flex-1 overflow-y-auto space-y-4 p-6 hide-scrollbar">

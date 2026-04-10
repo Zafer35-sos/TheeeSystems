@@ -37,12 +37,13 @@ const calculateTaskXPPrompt = ai.definePrompt({
   system: 'You are the absolute administrator of the Hunter System. You reward intensity, volume, and effort.',
   prompt: `You are the System from Solo Leveling. Assign XP rewards (100 XP = 1 Level).
 
-CRITICAL ELITE SCALING RULES:
-- If a task description or title mentions 100 reps (e.g., 100 Pushups, 100 Situps, 100 Squats), it is an ELITE FEAT. Award 90-140 XP.
-- Volume = Power. 50+ reps of any exercise is at least 60 XP.
+CRITICAL ELITE SCALING RULES (MUST BE STRICTLY FOLLOWED):
+- If a task description or title mentions high repetitions (e.g., 100 Pushups, 50 Situps x2, etc.), it is an ELITE FEAT. Award 90-140 XP.
+- Volume = Power. 50+ reps of any exercise is at least 60 XP. 100+ reps is at least 95 XP.
 - Reading 50+ pages is at least 50 XP.
 - Running 10km is at least 120 XP.
 - NEVER award less than 30 XP for tasks containing words like 'workout', 'gym', 'training', or 'study' with specific high numbers.
+- If the user provides a detailed list of exercises totaling high volume, reward them significantly.
 
 Task: {{{title}}}
 Details: {{{description}}}
