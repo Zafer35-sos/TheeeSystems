@@ -1,4 +1,3 @@
-
 "use client";
 
 import { UserProfile, XP_PER_LEVEL, ALL_TITLES } from "@/lib/types";
@@ -79,7 +78,7 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
                       <Trophy className="h-5 w-5 text-yellow-500" /> TITLE COLLECTION
                     </DialogTitle>
                     <DialogDescription className="text-xs text-muted-foreground">
-                      Equip a title earned through your achievements in the System. Titles may grant unique prestige.
+                      Equip an identity earned through your achievements. Titles grant prestige within the Hunter System.
                     </DialogDescription>
                   </DialogHeader>
                   <div className="flex-1 overflow-y-auto space-y-4 p-6 hide-scrollbar">
@@ -120,7 +119,7 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
                               }`}>{titleDef.rarity}</span>}
                             </div>
                             <p className="text-[10px] text-muted-foreground leading-tight italic">
-                              {isHidden ? "This legendary identity is currently hidden from your perception." : isUnlocked ? titleDef.description : titleDef.requirement}
+                              {isHidden ? "This identity is currently hidden from your perception." : isUnlocked ? titleDef.description : titleDef.requirement}
                             </p>
                           </div>
                           {isUnlocked && (

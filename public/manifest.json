@@ -1,4 +1,3 @@
-
 {
   "name": "System Hunter",
   "short_name": "Hunter",
@@ -7,8 +6,6 @@
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#732aff",
-  "orientation": "portrait",
-  "id": "com.systemhunter.app",
   "icons": [
     {
       "src": "https://placehold.co/192x192/732aff/ffffff.png?text=H",
@@ -31,18 +28,18 @@
   ],
   "screenshots": [
     {
-      "src": "https://picsum.photos/seed/hunter-ss1/1080/1920",
-      "sizes": "1080x1920",
-      "type": "image/jpeg",
-      "form_factor": "narrow",
-      "label": "Hunter Terminal Interface"
+      "src": "https://placehold.co/600x400/732aff/ffffff.png?text=Quest+Log",
+      "sizes": "600x400",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Track your daily quests and level up."
     },
     {
-      "src": "https://picsum.photos/seed/hunter-ss2/1920/1080",
-      "sizes": "1920x1080",
-      "type": "image/jpeg",
-      "form_factor": "wide",
-      "label": "System Dashboard"
+      "src": "https://placehold.co/400x600/732aff/ffffff.png?text=System+Stats",
+      "sizes": "400x600",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Analyze your character attributes."
     }
   ]
 }

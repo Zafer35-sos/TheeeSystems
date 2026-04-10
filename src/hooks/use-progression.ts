@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
@@ -6,7 +5,7 @@ import { Task, UserProfile, XP_PER_LEVEL, UserStats, Message, TaskType, StatusEf
 import { calculateTaskXP } from "@/ai/flows/calculate-task-xp";
 import { useToast } from "@/hooks/use-toast";
 
-const STORAGE_KEY = "system_hunter_data_v2";
+const STORAGE_KEY = "system_hunter_data_v3";
 
 const INITIAL_PROFILE: UserProfile = {
   firstName: "",
@@ -104,7 +103,7 @@ export function useProgression() {
     }
   }, [profile, tasks, hasHydrated]);
 
-  const addXp = (amount: number, statWeights?: Partial<UserStats>) => {
+  const addXp = useCallback((amount: number, statWeights?: Partial<UserStats>) => {
     setProfile((prev) => {
       const multiplier = (prev.statusEffects || []).reduce((acc, e) => acc * e.multiplier, 1);
       const modifiedAmount = Math.round(amount * multiplier);
@@ -129,7 +128,7 @@ export function useProgression() {
         stats: updatedStats 
       };
     });
-  };
+  }, []);
 
   const addTask = async (title: string, description?: string, type: TaskType = 'daily') => {
     const id = 'task-' + Date.now();
