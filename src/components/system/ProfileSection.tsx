@@ -1,6 +1,7 @@
+
 "use client";
 
-import { UserProfile, XP_PER_LEVEL, ALL_TITLES, StatusEffect } from "@/lib/types";
+import { UserProfile, XP_PER_LEVEL, ALL_TITLES } from "@/lib/types";
 import { Progress } from "@/components/ui/progress";
 import { Flame, Calendar, ChevronRight, Trophy, Lock, Check, Sparkles, Zap, ShieldAlert } from "lucide-react";
 import {
@@ -8,6 +9,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -33,14 +35,12 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
   return (
     <div className="flex flex-col gap-5">
       <div className="flex items-center gap-4">
-        {/* Avatar LVL Circle */}
         <div className="relative shrink-0">
           <div className="w-14 h-14 rounded-full border-2 border-primary bg-background flex flex-col items-center justify-center shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)]">
             <span className="text-[8px] uppercase font-bold text-muted-foreground leading-none">LV</span>
             <span className="text-xl font-black italic leading-none">{profile.level}</span>
           </div>
           
-          {/* Active Status Indicators */}
           {activeEffects.length > 0 && (
             <div className="absolute -bottom-1 -right-1 flex -space-x-1">
               {activeEffects.some(e => e.type === 'buff') && (
@@ -57,7 +57,6 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
           )}
         </div>
 
-        {/* User Info */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between">
             <div className="flex flex-col flex-1 min-w-0">
@@ -74,11 +73,14 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
                     <ChevronRight className="h-2 w-2 text-secondary group-hover:text-primary transition-colors" />
                   </button>
                 </DialogTrigger>
-                <DialogContent className="bg-card/95 backdrop-blur-xl border-primary/20 max-w-[90%] rounded-xl overflow-hidden max-h-[80vh] flex flex-col p-0 selection:bg-primary/30">
+                <DialogContent className="bg-card/95 backdrop-blur-xl border-primary/20 max-w-[90%] rounded-xl overflow-hidden max-h-[80vh] flex flex-col p-0">
                   <DialogHeader className="shrink-0 p-6 border-b border-white/5 bg-primary/5">
                     <DialogTitle className="text-lg font-black italic uppercase tracking-tighter glow-text-primary flex items-center gap-2">
                       <Trophy className="h-5 w-5 text-yellow-500" /> TITLE COLLECTION
                     </DialogTitle>
+                    <DialogDescription className="text-xs text-muted-foreground">
+                      Equip a title earned through your achievements in the System.
+                    </DialogDescription>
                   </DialogHeader>
                   <div className="flex-1 overflow-y-auto space-y-4 p-6 hide-scrollbar">
                     {ALL_TITLES.map((titleDef) => {
@@ -161,7 +163,6 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
         </div>
       </div>
 
-      {/* Active Effects Bar */}
       {activeEffects.length > 0 && (
         <div className="flex flex-wrap gap-2 animate-in slide-in-from-top duration-500">
           <TooltipProvider>
