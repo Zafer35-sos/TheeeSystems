@@ -38,11 +38,11 @@ const calculateTaskXPPrompt = ai.definePrompt({
   prompt: `You are the System from Solo Leveling. Assign XP rewards (100 XP = 1 Level).
 
 CRITICAL ELITE SCALING RULES (MUST BE STRICTLY FOLLOWED):
-- Volume = Power. If the user mentions high repetitions in title OR description (e.g., '100 Pushups', '50 Sit-ups x2', 'Total 100 reps', etc.), it is an ELITE FEAT.
-- AWARD AT LEAST 100-150 XP for high volume (100+ total reps). Never give 10 XP for 100 pushups.
-- Reading 50+ pages is at least 70 XP.
-- Running 5km+ is at least 90 XP.
-- Detailed workout lists with high numbers MUST be rewarded significantly (110-160 XP).
+- VOLUME = POWER. If the user mentions high repetitions in title OR description (e.g., '100 Pushups', '50 Sit-ups x2', 'Total 100 reps', etc.), it is an ELITE FEAT.
+- AWARD 100-150 XP for high volume (100+ total reps). Never give 10-20 XP for elite feats.
+- Reading 50+ pages is at least 70-90 XP.
+- Running 5km+ is at least 90-120 XP.
+- Detailed workout lists with high numbers (e.g., 40 pullups, 30 squats x3) MUST be rewarded significantly (110-160 XP).
 - Standard minor tasks (brush teeth, wake up) stay at 10-25 XP.
 
 Task: {{{title}}}

@@ -1,46 +1,38 @@
 
 {
   "name": "System Hunter",
-  "short_name": "System",
+  "short_name": "Hunter",
   "description": "The absolute administrator of the Hunter System.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#18151f",
-  "theme_color": "#732aff",
+  "background_color": "#221E29",
+  "theme_color": "#732AFF",
   "icons": [
     {
-      "src": "https://placehold.co/192x192/732aff/ffffff.png?text=System",
+      "src": "https://placehold.co/192x192/732AFF/FFFFFF.png?text=System",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "https://placehold.co/512x512/732aff/ffffff.png?text=System",
+      "src": "https://placehold.co/512x512/732AFF/FFFFFF.png?text=System",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "https://placehold.co/512x512/732aff/ffffff.png?text=System",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "https://placehold.co/1080x1920/18151f/732aff.png?text=Status+Terminal",
-      "sizes": "1080x1920",
+      "src": "https://placehold.co/600x400/732AFF/FFFFFF.png?text=Quest+Log",
+      "sizes": "600x400",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Hunter Status Terminal"
+      "form_factor": "wide"
     },
     {
-      "src": "https://placehold.co/1920x1080/18151f/732aff.png?text=System+Dashboard",
-      "sizes": "1920x1080",
+      "src": "https://placehold.co/400x600/732AFF/FFFFFF.png?text=Character+Status",
+      "sizes": "400x600",
       "type": "image/png",
-      "form_factor": "wide",
-      "label": "System Administrator Dashboard"
+      "form_factor": "narrow"
     }
   ]
 }
