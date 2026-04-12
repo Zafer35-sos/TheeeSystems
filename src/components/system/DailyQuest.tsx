@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Task, UserProfile, TaskType } from "@/lib/types";
