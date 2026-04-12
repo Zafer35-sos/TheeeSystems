@@ -44,7 +44,7 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
             <div className="absolute -bottom-1 -right-1 flex -space-x-1">
               {activeEffects.some(e => e.type === 'buff') && (
                 <div className="w-5 h-5 rounded-full bg-emerald-500 border border-background flex items-center justify-center animate-pulse">
-                  <Zap className="h-2.5 w-2.5 text-white fill-white" />
+                  < Zap className="h-2.5 w-2.5 text-white fill-white" />
                 </div>
               )}
               {activeEffects.some(e => e.type === 'debuff') && (
@@ -78,7 +78,7 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
                       <Trophy className="h-5 w-5 text-yellow-500" /> TITLE COLLECTION
                     </DialogTitle>
                     <DialogDescription className="text-xs text-muted-foreground">
-                      Equip an identity earned through your achievements. Titles grant prestige within the Hunter System.
+                      Select and equip your earned titles. Each title represents a milestone in your journey as a Hunter.
                     </DialogDescription>
                   </DialogHeader>
                   <div className="flex-1 overflow-y-auto space-y-4 p-6 hide-scrollbar">

@@ -1,15 +1,14 @@
 {
   "name": "System Hunter",
-  "short_name": "System",
-  "description": "The absolute administrator of the Hunter System. Level up your life.",
-  "id": "/index",
+  "short_name": "Hunter",
+  "description": "The absolute administrator of the Hunter System.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0c0a15",
+  "background_color": "#000000",
   "theme_color": "#732aff",
   "icons": [
     {
-      "src": "https://placehold.co/192x192/732aff/ffffff.png?text=System",
+      "src": "https://placehold.co/192x192/732aff/ffffff.png?text=H",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
@@ -21,26 +20,18 @@
       "purpose": "any"
     },
     {
-      "src": "https://placehold.co/192x192/732aff/ffffff.png?text=System",
-      "sizes": "192x192",
+      "src": "https://placehold.co/512x512/732aff/ffffff.png?text=Hunter",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "https://placehold.co/1080x1920/0c0a15/732aff.png?text=Character+Status",
-      "sizes": "1080x1920",
+      "src": "https://placehold.co/600x400/732aff/ffffff.png?text=Quest+Log",
+      "sizes": "600x400",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Character Status Screen"
-    },
-    {
-      "src": "https://placehold.co/1920x1080/0c0a15/732aff.png?text=Elite+Quests",
-      "sizes": "1920x1080",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Quest Dashboard"
+      "label": "Hunter Quest Log"
     }
   ]
 }
