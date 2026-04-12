@@ -105,7 +105,7 @@ export function DailyQuest({
                 New Task
               </DialogTitle>
               <DialogDescription className="text-xs text-muted-foreground">
-                Add a new objective to your daily quest log. The system will evaluate the challenge level.
+                Add a new objective to your daily quest log. The system will evaluate the challenge level based on task volume.
               </DialogDescription>
             </DialogHeader>
 
@@ -147,7 +147,7 @@ export function DailyQuest({
               <div className="space-y-2">
                 <label className="text-xs font-semibold text-muted-foreground">Description (optional)</label>
                 <Textarea 
-                  placeholder="Include details like repetitions and duration for better XP assessment." 
+                  placeholder="Include details like repetitions and duration for better XP assessment. 100+ reps = Elite XP." 
                   className="bg-[#241d33] border-none min-h-[100px] text-sm text-white placeholder:text-muted-foreground/50 focus-visible:ring-primary resize-none"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
