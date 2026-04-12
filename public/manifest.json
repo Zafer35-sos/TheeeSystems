@@ -4,17 +4,17 @@
   "description": "The absolute administrator of the Hunter System.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#18151f",
+  "background_color": "#08060a",
   "theme_color": "#732aff",
   "icons": [
     {
-      "src": "https://placehold.co/192x192/732aff/ffffff.png?text=H",
+      "src": "https://placehold.co/192x192/732aff/ffffff.png?text=Hunter",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://placehold.co/512x512/732aff/ffffff.png?text=Hunter",
+      "src": "https://placehold.co/512x512/732aff/ffffff.png?text=System+Hunter",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

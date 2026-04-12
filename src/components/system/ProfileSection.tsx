@@ -78,7 +78,7 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
                       <Trophy className="h-5 w-5 text-yellow-500" /> TITLE COLLECTION
                     </DialogTitle>
                     <DialogDescription className="text-xs text-muted-foreground">
-                      Select and equip identity titles earned through your progression in the system.
+                      Manage and equip your hard-earned titles from the Hunter System archives.
                     </DialogDescription>
                   </DialogHeader>
                   <div className="flex-1 overflow-y-auto space-y-4 p-6 hide-scrollbar">
