@@ -191,9 +191,7 @@ export default function MobileSystemPage() {
             <DialogTitle className="text-2xl font-black italic uppercase text-white tracking-tighter leading-tight">
               Weekly Challenge Has Arrived
             </DialogTitle>
-            <DialogDescription className="text-lg font-bold text-primary italic">
-              - {pendingWeeklyChallenge?.title} -
-            </DialogDescription>
+            <DialogDescription className="text-xs text-muted-foreground">The Architect has forged a new high-level objective for your progression.</DialogDescription>
           </DialogHeader>
           <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/50 to-transparent my-4" />
           <div className="bg-primary/10 border border-primary/20 p-4 rounded-lg my-6 w-full text-xs text-primary/90 leading-relaxed font-medium">
