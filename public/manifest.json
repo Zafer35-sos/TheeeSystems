@@ -1,23 +1,18 @@
 {
   "name": "System Hunter",
   "short_name": "Hunter",
-  "description": "The absolute administrator of the Hunter System. Level up your life.",
+  "description": "Leveling system for hunters.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#0d0b14",
   "theme_color": "#732aff",
+  "id": "com.systemhunter.app",
   "icons": [
     {
-      "src": "https://placehold.co/192x192/732aff/ffffff.png?text=H",
+      "src": "https://placehold.co/192x192/732aff/ffffff.png?text=Hunter",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
-    },
-    {
-      "src": "https://placehold.co/192x192/732aff/ffffff.png?text=H",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
     },
     {
       "src": "https://placehold.co/512x512/732aff/ffffff.png?text=System+Hunter",
@@ -28,18 +23,16 @@
   ],
   "screenshots": [
     {
-      "src": "https://placehold.co/600x400/732aff/ffffff.png?text=Quest+Log",
-      "sizes": "600x400",
+      "src": "https://placehold.co/1080x1920/0d0b14/732aff.png?text=Quest+Log",
+      "sizes": "1080x1920",
       "type": "image/png",
-      "form_factor": "wide",
-      "label": "Track your daily quests and level up."
+      "form_factor": "narrow"
     },
     {
-      "src": "https://placehold.co/400x600/732aff/ffffff.png?text=System+Stats",
-      "sizes": "400x600",
+      "src": "https://placehold.co/1920x1080/0d0b14/732aff.png?text=System+Status",
+      "sizes": "1920x1080",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Analyze your character attributes."
+      "form_factor": "wide"
     }
   ]
 }

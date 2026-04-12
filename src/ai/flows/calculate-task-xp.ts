@@ -42,7 +42,7 @@ CRITICAL ELITE SCALING RULES (MUST BE STRICTLY FOLLOWED):
 - Reading 50+ pages is at least 50 XP.
 - Running 10km is at least 120 XP.
 - NEVER award less than 30 XP for tasks containing words like 'workout', 'gym', 'training', or 'study' with specific high numbers.
-- If the user provides a detailed list of exercises totaling high volume, reward them significantly.
+- If the user provides a detailed list of exercises totaling high volume (like '100 Push-ups 50 Sit-ups x2 40 Pull-ups x2 30 Squats x3'), reward them significantly (120-150 XP).
 
 Task: {{{title}}}
 Details: {{{description}}}

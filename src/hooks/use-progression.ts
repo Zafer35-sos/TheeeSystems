@@ -5,7 +5,7 @@ import { Task, UserProfile, XP_PER_LEVEL, UserStats, Message, TaskType, StatusEf
 import { calculateTaskXP } from "@/ai/flows/calculate-task-xp";
 import { useToast } from "@/hooks/use-toast";
 
-const STORAGE_KEY = "system_hunter_data_v3";
+const STORAGE_KEY = "system_hunter_data_v4";
 
 const INITIAL_PROFILE: UserProfile = {
   firstName: "",
