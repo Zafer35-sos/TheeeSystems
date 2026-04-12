@@ -1,3 +1,4 @@
+
 "use client";
 
 import { UserProfile, XP_PER_LEVEL, ALL_TITLES } from "@/lib/types";
@@ -78,7 +79,7 @@ export function ProfileSection({ profile, onUpdateTitle }: ProfileSectionProps) 
                       <Trophy className="h-5 w-5 text-yellow-500" /> TITLE COLLECTION
                     </DialogTitle>
                     <DialogDescription className="text-xs text-muted-foreground">
-                      Select and equip your earned titles. Each title represents a milestone in your journey as a Hunter.
+                      Manage your unlocked identities and equip titles that reflect your current standing in the system.
                     </DialogDescription>
                   </DialogHeader>
                   <div className="flex-1 overflow-y-auto space-y-4 p-6 hide-scrollbar">
