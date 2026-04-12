@@ -38,10 +38,10 @@ const calculateTaskXPPrompt = ai.definePrompt({
 
 CRITICAL ELITE SCALING RULES:
 - VOLUME = POWER. If the user mentions high repetitions (e.g., '100 Pushups', '50 reps x2', 'Total 100 reps'), it is an ELITE FEAT.
-- AWARD 100-150 XP for high volume (100+ total reps).
-- Reading 50+ pages is 70-100 XP.
-- Running 5km+ is 90-130 XP.
-- Detailed workout lists with high numbers MUST be rewarded significantly (110-160 XP).
+- YOU MUST AWARD BETWEEN 120 AND 160 XP for high volume (100+ total reps). This is non-negotiable.
+- Reading 50+ pages is 80-110 XP.
+- Running 5km+ is 100-140 XP.
+- Detailed workout lists with high numbers MUST be rewarded significantly (120-170 XP).
 - Standard minor tasks stay at 5-15 XP.
 
 Task: {{{title}}}

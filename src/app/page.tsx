@@ -49,7 +49,6 @@ export default function MobileSystemPage() {
   const [activeTab, setActiveTab] = useState("quests");
 
   useEffect(() => {
-    // Basic mobile view protection
     document.body.style.overflow = 'hidden';
     document.body.style.position = 'fixed';
     document.body.style.width = '100%';
@@ -81,7 +80,6 @@ export default function MobileSystemPage() {
 
   return (
     <div suppressHydrationWarning className="fixed inset-0 bg-black text-foreground flex justify-center selection:bg-primary/30 overflow-hidden">
-      {/* Dynamic Background */}
       {profile.theme.backgroundImage && (
         <div 
           className="fixed inset-0 bg-cover bg-center pointer-events-none transition-all duration-1000"
@@ -97,7 +95,6 @@ export default function MobileSystemPage() {
         className="w-full max-w-md relative z-10 flex flex-col h-full overflow-hidden border-x border-primary/5 transition-all duration-500 pb-safe"
         style={{ backgroundColor: `rgba(var(--background-rgb), ${profile.theme.opacity})` }}
       >
-        {/* Header Section */}
         <section className="px-6 pt-12 pb-4 shrink-0 relative">
           <ProfileSection 
             profile={profile} 
@@ -105,7 +102,6 @@ export default function MobileSystemPage() {
           />
         </section>
 
-        {/* Navigation Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 flex flex-col min-h-0">
           <div className="px-6 mb-4 shrink-0">
             <TabsList className="w-full bg-muted/20 border border-primary/10 grid grid-cols-3 h-12 p-1">
@@ -158,7 +154,6 @@ export default function MobileSystemPage() {
           </div>
         </Tabs>
 
-        {/* Settings Overlay Trigger */}
         <div className="absolute right-6 bottom-6 z-50">
           <Sheet>
             <SheetTrigger asChild>
@@ -171,6 +166,7 @@ export default function MobileSystemPage() {
                 <SheetTitle className="text-lg font-black italic uppercase tracking-tighter glow-text-primary flex items-center gap-2">
                   <Settings className="h-5 w-5 text-primary" /> System Control
                 </SheetTitle>
+                <SheetDescription className="text-xs text-muted-foreground">Adjust system parameters and interface themes.</SheetDescription>
               </SheetHeader>
               <div className="p-6">
                 <SettingsSection 
@@ -184,22 +180,21 @@ export default function MobileSystemPage() {
         </div>
       </main>
 
-      {/* Weekly Challenge Alert */}
       <Dialog open={!!pendingWeeklyChallenge} onOpenChange={() => {}}>
         <DialogContent className="bg-card/90 backdrop-blur-2xl border-primary/50 max-w-[90%] rounded-xl p-8 flex flex-col items-center text-center">
-          <div className="w-16 h-16 rounded-full bg-primary/20 border border-primary flex items-center justify-center mb-6 animate-pulse">
-            <Sparkles className="h-8 w-8 text-primary" />
-          </div>
-          <DialogHeader className="space-y-2">
+          <DialogHeader className="space-y-2 flex flex-col items-center">
+            <div className="w-16 h-16 rounded-full bg-primary/20 border border-primary flex items-center justify-center mb-6 animate-pulse">
+              <Sparkles className="h-8 w-8 text-primary" />
+            </div>
             <div className="text-[10px] font-black text-primary uppercase tracking-[0.4em] mb-1">System Message</div>
             <DialogTitle className="text-2xl font-black italic uppercase text-white tracking-tighter leading-tight">
               Weekly Challenge Has Arrived
             </DialogTitle>
-            <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/50 to-transparent my-4" />
             <DialogDescription className="text-lg font-bold text-primary italic">
               - {pendingWeeklyChallenge?.title} -
             </DialogDescription>
           </DialogHeader>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/50 to-transparent my-4" />
           <div className="bg-primary/10 border border-primary/20 p-4 rounded-lg my-6 w-full text-xs text-primary/90 leading-relaxed font-medium">
             {pendingWeeklyChallenge?.description}
             <div className="mt-4 flex items-center justify-center gap-2 text-primary font-code font-black text-sm">
