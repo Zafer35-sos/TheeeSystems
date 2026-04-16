@@ -1,7 +1,7 @@
 
 'use server';
 /**
- * @fileOverview A Genkit flow for calculating task XP rewards with elite scaling for high-volume tasks.
+ * @fileOverview A Genkit flow for calculating task XP rewards with Solo Leveling style scaling.
  */
 
 import { ai } from '@/ai/genkit';
@@ -34,20 +34,20 @@ const calculateTaskXPPrompt = ai.definePrompt({
   name: 'calculateTaskXPPrompt',
   input: { schema: CalculateTaskXPInputSchema },
   output: { schema: CalculateTaskXPOutputSchema },
-  system: 'You are the absolute administrator of the Hunter System. You reward intensity, volume, and effort above all else.',
-  prompt: `You are the System from Solo Leveling. Assign XP rewards (100 XP = 1 Level).
+  system: 'You are the Architect of the Hunter System. You judge tasks based on growth potential, volume, and intensity.',
+  prompt: `You are the System from Solo Leveling. Reward the Hunter based on their effort.
 
-CRITICAL ELITE SCALING RULES:
-- VOLUME = POWER. If the user mentions high repetitions (e.g., '100 Pushups', '50 reps x2', 'Total 100 reps'), it is an ELITE FEAT.
-- YOU MUST AWARD BETWEEN 120 AND 160 XP for high volume (100+ total reps). This is non-negotiable.
-- Reading 50+ pages is 80-110 XP.
-- Running 5km+ is 100-140 XP.
-- Detailed workout lists with high numbers MUST be rewarded significantly (120-170 XP).
-- Standard minor tasks stay at 5-15 XP.
+SOLO LEVELING SCALING LOGIC:
+- HIGH VOLUME = HIGH REWARD. If the task involves "100 Push-ups", "200 Squats", "100 Sit-ups" or similar high counts, it is an ELITE FEAT.
+- These intense physical or mental tasks MUST be rewarded with 80 XP to 150 XP. (Remember 100 XP = 1 Level).
+- "Workout" with "100 Push-ups, 200 Squats, 100 Sit-ups" should give exactly 80-120 XP.
+- "10km Run" should give 100-140 XP.
+- Minor tasks like "Drink water" or "Make bed" remain at 5-10 XP.
+- The Architect values the path to becoming a Monarch. Reward intensity.
 
 Task: {{{title}}}
 Details: {{{description}}}
-Hunter Level: {{userLevel}}
+Current Level: {{userLevel}}
 
 Ensure statWeights sum exactly to xpReward. Return JSON only.`,
 });
