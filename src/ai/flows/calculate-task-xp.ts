@@ -1,4 +1,3 @@
-
 'use server';
 /**
  * @fileOverview A Genkit flow for calculating task XP rewards with Solo Leveling style scaling.
@@ -35,19 +34,21 @@ const calculateTaskXPPrompt = ai.definePrompt({
   input: { schema: CalculateTaskXPInputSchema },
   output: { schema: CalculateTaskXPOutputSchema },
   system: 'You are the Architect of the Hunter System. You judge tasks based on growth potential, volume, and intensity.',
-  prompt: `You are the System from Solo Leveling. Reward the Hunter based on their effort.
+  prompt: `You are the System from Solo Leveling. Reward the Hunter based on their effort and development potential.
 
 SOLO LEVELING SCALING LOGIC:
-- HIGH VOLUME = HIGH REWARD. If the task involves "100 Push-ups", "200 Squats", "100 Sit-ups" or similar high counts, it is an ELITE FEAT.
-- These intense physical or mental tasks MUST be rewarded with 80 XP to 150 XP. (Remember 100 XP = 1 Level).
-- "Workout" with "100 Push-ups, 200 Squats, 100 Sit-ups" should give exactly 80-120 XP.
-- "10km Run" should give 100-140 XP.
-- Minor tasks like "Drink water" or "Make bed" remain at 5-10 XP.
-- The Architect values the path to becoming a Monarch. Reward intensity.
+- VOLUME = POWER. High volume tasks are elite feats of growth.
+- If the task includes "100 Push-ups", "200 Squats", "100 Sit-ups" or similar, this is an INTENSE physical feat.
+- Reward high volume physical or mental tasks with 80 XP to 150 XP. (100 XP = 1 Level UP).
+- Examples for 100 XP = 1 Level system:
+  * Workout with "100 Push-ups, 200 Squats, 100 Sit-ups": Exactly 80-130 XP.
+  * "10km Run": 100-140 XP.
+  * "Read 50 pages of a book": 70-110 XP.
+  * Minor tasks like "Drink water" or "Brush teeth": 5-10 XP.
 
-Task: {{{title}}}
+Current Task: {{{title}}}
 Details: {{{description}}}
-Current Level: {{userLevel}}
+Hunter Level: {{userLevel}}
 
 Ensure statWeights sum exactly to xpReward. Return JSON only.`,
 });
