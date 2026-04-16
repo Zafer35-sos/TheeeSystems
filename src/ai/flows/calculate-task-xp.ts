@@ -36,15 +36,13 @@ const calculateTaskXPPrompt = ai.definePrompt({
   system: 'You are the Architect of the Hunter System. You judge tasks based on growth potential, volume, and intensity.',
   prompt: `You are the System from Solo Leveling. Reward the Hunter based on their effort and development potential.
 
-SOLO LEVELING SCALING LOGIC:
+SOLO LEVELING SCALING LOGIC (100 XP = 1 LEVEL UP):
 - VOLUME = POWER. High volume tasks are elite feats of growth.
-- If the task includes "100 Push-ups", "200 Squats", "100 Sit-ups" or similar, this is an INTENSE physical feat.
-- Reward high volume physical or mental tasks with 80 XP to 150 XP. (100 XP = 1 Level UP).
-- Examples for 100 XP = 1 Level system:
-  * Workout with "100 Push-ups, 200 Squats, 100 Sit-ups": Exactly 80-130 XP.
-  * "10km Run": 100-140 XP.
-  * "Read 50 pages of a book": 70-110 XP.
-  * Minor tasks like "Drink water" or "Brush teeth": 5-10 XP.
+- If the task description includes "100 Push-ups", "200 Squats", "100 Sit-ups" (the classic daily quest), this is an INTENSE physical feat.
+- Reward this specific high-volume workout (100/200/100) with exactly 80-130 XP.
+- "10km Run": 100-140 XP.
+- "Read 50 pages": 70-110 XP.
+- Minor tasks like "Drink water": 5-10 XP.
 
 Current Task: {{{title}}}
 Details: {{{description}}}
