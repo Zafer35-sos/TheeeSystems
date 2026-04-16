@@ -2,10 +2,10 @@
 {
   "name": "System Hunter",
   "short_name": "Hunter",
-  "description": "Absolute administrator of the Hunter System.",
+  "description": "The absolute administrator of the Hunter System.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#18151f",
+  "background_color": "#221e29",
   "theme_color": "#732aff",
   "icons": [
     {
